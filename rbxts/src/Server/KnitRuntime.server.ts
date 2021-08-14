@@ -2,15 +2,15 @@
 // Written by OminousVibes#7259
 // 8/13/21
 
-import { Players, ReplicatedStorage, RunService, CollectionService } from "@rbxts/services";
+import { Players, RunService, CollectionService } from "@rbxts/services";
 import { KnitServer as Knit, Component } from "@rbxts/knit";
 import Globals from "Shared/Globals";
 
 // Fetch Folders:
 const Root = script.Parent;
-const Components = Root?.FindFirstChild("Components");
-const Services = Root?.FindFirstChild("Services");
-const Modules = Root?.FindFirstChild("Modules");
+const Components = Root!.FindFirstChild("Components");
+const Services = Root!.FindFirstChild("Services");
+const Modules = Root!.FindFirstChild("Modules");
 
 assert(Components, "[Knit Server]: Components may have gone missing.");
 assert(Services, "[Knit Server]: Services may have gone missing.");

@@ -13,21 +13,9 @@ local Component = _knit.Component
 local Globals = TS.import(script, game:GetService("ReplicatedStorage"), "TS", "Globals")
 -- Fetch Folders:
 local Root = script.Parent
-local _Components = Root
-if _Components ~= nil then
-	_Components = _Components:FindFirstChild("Components")
-end
-local Components = _Components
-local _Services = Root
-if _Services ~= nil then
-	_Services = _Services:FindFirstChild("Services")
-end
-local Services = _Services
-local _Modules = Root
-if _Modules ~= nil then
-	_Modules = _Modules:FindFirstChild("Modules")
-end
-local Modules = _Modules
+local Components = Root:FindFirstChild("Components")
+local Services = Root:FindFirstChild("Services")
+local Modules = Root:FindFirstChild("Modules")
 assert(Components, "[Knit Server]: Components may have gone missing.")
 assert(Services, "[Knit Server]: Services may have gone missing.")
 assert(Modules, "[Knit Server]: Modules may have gone missing.")

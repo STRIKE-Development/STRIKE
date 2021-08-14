@@ -8,9 +8,9 @@ import Globals from "Shared/Globals";
 
 // Fetch Folders:
 const Root = script.Parent;
-const Components = Root?.FindFirstChild("Components");
-const Controllers = Root?.FindFirstChild("Controllers");
-const Modules = Root?.FindFirstChild("Modules");
+const Components = Root!.FindFirstChild("Components");
+const Controllers = Root!.FindFirstChild("Controllers");
+const Modules = Root!.FindFirstChild("Modules");
 
 assert(Components, "[Knit Client]: Components may have gone missing.");
 assert(Controllers, "[Knit Client]: Controllers may have gone missing.");
