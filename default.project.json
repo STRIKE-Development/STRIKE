@@ -8,7 +8,7 @@
 		"$className": "DataModel",
 		"ServerScriptService": {
 			"$className": "ServerScriptService",
-			"TS": {
+			"Knit-TS": {
 				"$path": "rbxts/out/Server"
 			}
 		},
@@ -28,7 +28,7 @@
 			"$className": "StarterPlayer",
 			"StarterPlayerScripts": {
 				"$className": "StarterPlayerScripts",
-				"TS": {
+				"Knit-TS": {
 					"$path": "rbxts/out/Client"
 				}
 			}

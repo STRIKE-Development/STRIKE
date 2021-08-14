@@ -1,6 +1,6 @@
-// Server Runtime (0.0.20-alpha)
+// Client Runtime (0.0.20-alpha)
 // Written by OminousVibes#7259
-// 7/20/21
+// 8/13/21
 
 import { ReplicatedStorage, RunService } from "@rbxts/services";
 import { KnitClient as Knit, Component } from "@rbxts/knit";
@@ -18,8 +18,6 @@ assert(Modules, "[Knit Client]: Modules may have gone missing.");
 
 // Populate Globals:
 Globals.Modules = Modules;
-Globals.Shared = ReplicatedStorage!.FindFirstChild("Shared");
-Globals.Assets = ReplicatedStorage!.FindFirstChild("Assets");
 
 // Add controllers & components:
 Knit.AddControllersDeep(Controllers);
