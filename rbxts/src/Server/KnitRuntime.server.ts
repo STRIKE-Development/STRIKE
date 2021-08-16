@@ -1,4 +1,4 @@
-// Server Runtime (0.0.18-alpha)
+// Server Runtime (0.0.20-alpha)
 // Written by OminousVibes#7259
 // 8/13/21
 
@@ -8,18 +8,16 @@ import Globals from "Shared/Globals";
 
 // Fetch Folders:
 const Root = script.Parent;
-const Components = Root!.FindFirstChild("Components");
-const Services = Root!.FindFirstChild("Services");
-const Modules = Root!.FindFirstChild("Modules");
+const Services = Root!.WaitForChild("Services", 45) as Folder;
+const Components = Root!.WaitForChild("Components", 45) as Folder;
+const Modules = Root!.WaitForChild("Modules", 45) as Folder;
 
-assert(Components, "[Knit Server]: Components may have gone missing.");
-assert(Services, "[Knit Server]: Services may have gone missing.");
-assert(Modules, "[Knit Server]: Modules may have gone missing.");
+assert(Services && Components && Modules, "[Knit Server]: Required Knit Dependencies may be missing!");
 
 // Populate Globals:
 Globals.Modules = Modules;
 
-// Add controllers & components:
+// Add Services & Components:
 Knit.AddServicesDeep(Services);
 Component.Auto(Components);
 
@@ -29,10 +27,6 @@ Knit.Start()
 		if (RunService.IsStudio()) {
 			print("[Knit Server]: Initialized!");
 		}
-		for (const Player of Players.GetChildren()) {
-			CollectionService.AddTag(Player, "Player");
-		}
-		Players.PlayerAdded.Connect((Player: Player) => CollectionService.AddTag(Player, "Player"));
 	})
 	.catch(function (Exception: string) {
 		warn(`[Knit Server]: ${Exception}`);

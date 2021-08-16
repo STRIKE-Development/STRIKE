@@ -8,18 +8,16 @@ import Globals from "Shared/Globals";
 
 // Fetch Folders:
 const Root = script.Parent;
-const Components = Root!.FindFirstChild("Components");
-const Controllers = Root!.FindFirstChild("Controllers");
-const Modules = Root!.FindFirstChild("Modules");
+const Controllers = Root!.WaitForChild("Controllers", 45) as Folder;
+const Components = Root!.WaitForChild("Components", 45) as Folder;
+const Modules = Root!.WaitForChild("Modules", 45) as Folder;
 
-assert(Components, "[Knit Client]: Components may have gone missing.");
-assert(Controllers, "[Knit Client]: Controllers may have gone missing.");
-assert(Modules, "[Knit Client]: Modules may have gone missing.");
+assert(Controllers && Components && Modules, "[Knit Client]: Required Knit Dependencies may be missing!");
 
 // Populate Globals:
 Globals.Modules = Modules;
 
-// Add controllers & components:
+// Add Controllers & Components:
 Knit.AddControllersDeep(Controllers);
 Component.Auto(Components);
 
