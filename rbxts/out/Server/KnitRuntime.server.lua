@@ -7,7 +7,7 @@ local RunService = TS.import(script, TS.getModule(script, "@rbxts", "services"))
 local _knit = TS.import(script, TS.getModule(script, "@rbxts", "knit").Knit)
 local Knit = _knit.KnitServer
 local Component = _knit.Component
-local Globals = TS.import(script, game:GetService("ReplicatedStorage"), "TSsss", "Globals")
+local Globals = TS.import(script, game:GetService("ReplicatedStorage"), "TS", "Globals")
 -- Fetch Folders:
 local Root = script.Parent
 local Services = Root:WaitForChild("Services", 45)
