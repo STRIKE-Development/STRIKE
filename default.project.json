@@ -10,6 +10,9 @@
 			"$className": "ServerScriptService",
 			"TS": {
 				"$path": "rbxts/out/Server"
+			},
+			"Lua": {
+				"$path": "rbxlua/Server"
 			}
 		},
 		"ReplicatedStorage": {
@@ -22,6 +25,9 @@
 			},
 			"TS": {
 				"$path": "rbxts/out/Shared"
+			},
+			"Lua": {
+				"$path": "rbxlua/Shared"
 			}
 		},
 		"StarterPlayer": {
@@ -30,6 +36,9 @@
 				"$className": "StarterPlayerScripts",
 				"TS": {
 					"$path": "rbxts/out/Client"
+				},
+				"Lua": {
+					"$path": "rbxlua/Client"
 				}
 			}
 		},
