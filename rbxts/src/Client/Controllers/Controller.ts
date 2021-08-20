@@ -1,25 +1,8 @@
-// Load Knit:
-import { KnitClient as Knit } from "@rbxts/knit";
+import { Controller, OnRender } from "@flamework/core";
 
-// Create Controller:
-const Controller = Knit.CreateController({
-	Name: "Controller",
-
-	// Properties:
-	Property: "",
-
-	// Methods:
-	Method() {},
-
-	// Controller Built-ins:
-	KnitInit() {},
-	KnitStart() {},
-});
-
-// Export:
-export = Controller;
-declare global {
-	interface KnitControllers {
-		Controller: typeof Controller;
+@Controller()
+export class MyController implements OnRender {
+	onRender(dt: number) {
+		print("My controller is rendering", dt);
 	}
 }

@@ -10,16 +10,23 @@
 		"moduleResolution": "Node",
 		"noLib": true,
 		"resolveJsonModule": true,
-		"forceConsistentCasingInFileNames": true,
 		"strict": true,
 		"target": "ESNext",
-		"typeRoots": ["node_modules/@rbxts"],
+		"typeRoots": ["node_modules/@rbxts", "node_modules/@flamework"],
 
 		// configurable
 		"rootDir": "rbxts/src",
 		"outDir": "rbxts/out",
 		"baseUrl": "rbxts/src",
 		"incremental": true,
-		"tsBuildInfoFile": "rbxts/out/tsconfig.tsbuildinfo"
+		"tsBuildInfoFile": "rbxts/out/tsconfig.tsbuildinfo",
+
+		"experimentalDecorators": true,
+		"plugins": [
+			{
+				"transform": "rbxts-transformer-flamework",
+				"obfuscation": false
+			}
+		]
 	}
 }
