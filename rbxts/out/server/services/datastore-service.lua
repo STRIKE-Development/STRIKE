@@ -20,7 +20,7 @@ do
 	end
 end
 -- (Flamework) Datastore metadata
-Reflect.defineMetadata(Datastore, "identifier", "flamework-template:rbxts/out/server/services/Datastore@Datastore")
+Reflect.defineMetadata(Datastore, "identifier", "flamework-template:rbxts/out/server/services/datastore-service@Datastore")
 Reflect.defineMetadata(Datastore, "flamework:isExternal", false)
 Reflect.defineMetadata(Datastore, "flamework:implements", { "$:flamework@OnTick" })
 Reflect.defineMetadata(Datastore, "flamework:decorators", { "$:flamework@Service" })

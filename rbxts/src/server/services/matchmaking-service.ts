@@ -1,8 +1,6 @@
-import { Service } from "@flamework/core";
+import { Service, OnStart } from "@flamework/core";
 
 @Service()
-export class MatchMaking {
-	onTick(dt: number) {
-		print("My service is ticking", dt);
-	}
+export class MatchMaking implements OnStart {
+	onStart() {}
 }

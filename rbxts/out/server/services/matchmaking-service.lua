@@ -20,7 +20,7 @@ do
 	end
 end
 -- (Flamework) MatchMaking metadata
-Reflect.defineMetadata(MatchMaking, "identifier", "flamework-template:rbxts/out/server/services/Party@MatchMaking")
+Reflect.defineMetadata(MatchMaking, "identifier", "flamework-template:rbxts/out/server/services/matchmaking-service@MatchMaking")
 Reflect.defineMetadata(MatchMaking, "flamework:isExternal", false)
 Reflect.defineMetadata(MatchMaking, "flamework:decorators", { "$:flamework@Service" })
 Reflect.defineMetadata(MatchMaking, "flamework:decorators.$:flamework@Service", {
